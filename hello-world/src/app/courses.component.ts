@@ -4,16 +4,11 @@ import { CoursesService } from './courses.service';
 @Component({
     selector: "courses",
     template: `<h2>{{ title}}</h2>
-                <ul>
-                    <li *ngFor="let course of courses">{{ course }}</li>
-                </ul>`
+                <img [src]="organizationImageUrl">`
 })
 export class CoursesComponent {
     title: string = "List of courses"
-    courses : string[];
-
-    constructor(coursesService : CoursesService) {
-        this.courses = coursesService.getCourses();
-    }
+    organizationImageUrl: string = 
+        "https://codingbook.org/wp-content/uploads/2020/08/cropped-logo2-2-1.png"
 }
 
