@@ -12,8 +12,7 @@ export class CoursesComponent {
     title: string = "List of courses"
     courses : string[];
 
-    constructor() {
-        let coursesService = new CoursesService();
+    constructor(coursesService : CoursesService) {
         this.courses = coursesService.getCourses();
     }
 }
