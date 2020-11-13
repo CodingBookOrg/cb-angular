@@ -1,0 +1,15 @@
+<fa-icon 
+    [icon]="faStar" 
+    style="color: aquamarine;" 
+    *ngIf="isFavorite" 
+    (click)="toggleFavorite()"
+    size="6x">
+</fa-icon>
+
+<fa-icon    
+    [icon]="faStarEmpty" 
+    style="color: red;" 
+    *ngIf="!isFavorite" 
+    (click)="toggleFavorite()"
+    size="6x">
+</fa-icon>

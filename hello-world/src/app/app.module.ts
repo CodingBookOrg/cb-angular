@@ -8,6 +8,8 @@ import { CourseComponent } from './course/course.component';
 import { CoursesService } from './courses.service';
 import { FormsModule } from '@angular/forms';
 import { SummaryPipe } from './summary.pipe';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -15,12 +17,14 @@ import { SummaryPipe } from './summary.pipe';
     AppComponent,
     CoursesComponent,
     CourseComponent,
-    SummaryPipe
+    SummaryPipe,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [
     CoursesService
