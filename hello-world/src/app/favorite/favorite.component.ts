@@ -5,10 +5,12 @@ import { faStar as faStarEmpty } from '@fortawesome/free-regular-svg-icons';
 @Component({
   selector: 'favorite',
   templateUrl: './favorite.component.html',
-  styleUrls: ['./favorite.component.css']
+  styleUrls: ['./favorite.component.css'],
 })
 export class FavoriteComponent implements OnInit {
-  isFavorite = false;
+  
+  @Input("is-favorite") isFavorite: boolean;
+
   faStar = faStar;
   faStarEmpty = faStarEmpty;
   
