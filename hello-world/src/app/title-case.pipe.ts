@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ConsoleReporter } from 'jasmine';
 
 @Pipe({
   name: 'titleCase'
