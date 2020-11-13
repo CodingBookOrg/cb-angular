@@ -10,6 +10,7 @@ import { IFavoriteChangedEventArgs } from './Out/IFavoriteChangedEventArgs';
   selector: 'favorite',
   templateUrl: './favorite.component.html',
   styleUrls: ['./favorite.component.css'],
+  styles: ["div {background-color: orange; }"]
 })
 export class FavoriteComponent implements OnInit {
   
