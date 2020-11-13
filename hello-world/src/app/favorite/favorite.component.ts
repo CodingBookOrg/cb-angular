@@ -14,7 +14,7 @@ import { IFavoriteChangedEventArgs } from './Out/IFavoriteChangedEventArgs';
 export class FavoriteComponent implements OnInit {
   
   @Input("is-favorite") isFavorite: boolean;
-  @Output() change = new EventEmitter();
+  @Output("change") click = new EventEmitter();
 
   faStar = faStar;
   faStarEmpty = faStarEmpty;
@@ -28,7 +28,7 @@ export class FavoriteComponent implements OnInit {
     this.isFavorite = ! this.isFavorite;
     let args: IFavoriteChangedEventArgs = new FavoriteChangedEventArgs(); 
     args.newValue = this.isFavorite;
-    this.change.emit(args);
+    this.click.emit(args);
   }
 }
 
