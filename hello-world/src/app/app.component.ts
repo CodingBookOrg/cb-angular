@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isLiked = false;
-  title = '111222 hello-world';
+  
+  onFavoriteChanged= () => {
+    console.log("Favorite Changed");
+  }
 }
