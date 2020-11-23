@@ -1,11 +1,5 @@
 <button
-  [class.btn-success]="isSuccess"
-  [class.btn-danger]="!isSuccess"
->Do Something</button>
-
-<button
-  [ngClass]="{
-    'btn-success': isSuccess,
-    'btn-danger': !isSuccess
+  [ngStyle]="{
+    'backgroundColor': canSave ? 'blue' : 'gray'
   }"
->Do Something 2</button>
+>Save</button>
