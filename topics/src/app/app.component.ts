@@ -6,7 +6,12 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  canSave: boolean = false;
+  task = {
+    title: "Task 1",
+    assignee: {
+      name: "John"
+    }
+  }
 }
 
 class Course {

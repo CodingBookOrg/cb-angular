@@ -1,5 +1,7 @@
-<button
-  [ngStyle]="{
-    'backgroundColor': canSave ? 'blue' : 'gray'
-  }"
->Save</button>
+<!--span does not appear in DOM-->
+<span *ngIf="task.assignee">{{ task.assignee.name}}</span>
+
+<!-- Span is present in DOM, no string is evaluated -->
+<span >{{ task.assignee?.name}}</span>
+
+
