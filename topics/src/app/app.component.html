@@ -1,13 +1,5 @@
-<ul class="nav nav-pills">
-  <li class="nav-item"><a class="nav-link"
-                          [class.active]="viewMode=='map'"
-                          (click)="viewMode='map'" href="#" >Map View</a></li>
-  <li class="nav-item" ><a class="nav-link"
-                           [class.active]="viewMode=='list'"
-                           (click)="viewMode='list'" href="#" >List View</a> </li>
+<ul>
+  <li *ngFor="let course of courses">
+    {{ course.id }} - {{ course.name }}
+  </li>
 </ul>
-<div [ngSwitch]="viewMode">
-  <div *ngSwitchCase="'map'">Map View</div>
-  <div *ngSwitchCase="'list'">List View</div>
-  <div *ngSwitchDefault>Other</div>
-</div>
