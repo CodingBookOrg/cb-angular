@@ -6,9 +6,31 @@ import {Component,} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  courses = [
-    { id:1, name:'Java'},
-    { id:2, name:'Python'},
-    { id:3, name:'NG'}
+  courses : Course[] = [
+    new Course(1, 'Java'),
+    new Course(2, 'Python'),
+    new Course(2, 'NG'),
   ];
+
+  onAdd = () => {
+    this.courses.push(new Course(4, 'Spring'));
+  }
+
+  onDelete = (course: Course) => {
+    let index = this.courses.indexOf(course);
+    this.courses.splice(index, 1);
+  }
+
+  onUpdate = (course : Course) => {
+    course.setName("(Updated)")
+  }
+}
+
+class Course {
+  constructor(public id: number, public name : string) {
+  }
+
+  setName = (name : string) => {
+    this.name += name;
+  }
 }
