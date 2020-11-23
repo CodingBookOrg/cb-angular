@@ -6,18 +6,7 @@ import {Component,} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  courses : Course[] = []
-  load = () => {
-    this.courses = [
-      new Course(1, 'Java'),
-      new Course(2, 'Python'),
-      new Course(2, 'NG'),
-    ];
-  }
-
-  trackCourse = (index : number, course : Course) : number => {
-    return course ? course.id : undefined;
-  }
+  isSuccess: boolean = false;
 }
 
 class Course {

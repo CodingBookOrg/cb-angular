@@ -1,6 +1,11 @@
-<button class="btn btn-primary" (click)="load()">Load</button>
-<ul>
-  <li *ngFor="let course of courses; trackBy: trackCourse">
-    {{ course.name }}
-  </li>
-</ul>
+<button
+  [class.btn-success]="isSuccess"
+  [class.btn-danger]="!isSuccess"
+>Do Something</button>
+
+<button
+  [ngClass]="{
+    'btn-success': isSuccess,
+    'btn-danger': !isSuccess
+  }"
+>Do Something 2</button>
