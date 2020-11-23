@@ -6,23 +6,17 @@ import {Component,} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  courses : Course[] = [
-    new Course(1, 'Java'),
-    new Course(2, 'Python'),
-    new Course(2, 'NG'),
-  ];
-
-  onAdd = () => {
-    this.courses.push(new Course(4, 'Spring'));
+  courses : Course[] = []
+  load = () => {
+    this.courses = [
+      new Course(1, 'Java'),
+      new Course(2, 'Python'),
+      new Course(2, 'NG'),
+    ];
   }
 
-  onDelete = (course: Course) => {
-    let index = this.courses.indexOf(course);
-    this.courses.splice(index, 1);
-  }
-
-  onUpdate = (course : Course) => {
-    course.setName("(Updated)")
+  trackCourse = (index : number, course : Course) : number => {
+    return course ? course.id : undefined;
   }
 }
 
