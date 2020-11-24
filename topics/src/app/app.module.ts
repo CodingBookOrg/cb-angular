@@ -12,6 +12,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TitleCasePipe } from './title-case.pipe';
 import { CourseContentComponent } from './course-content/course-content.component';
+import { InputFormatDirective } from './input-format.directive';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { CourseContentComponent } from './course-content/course-content.componen
     SummaryPipe,
     FavoriteComponent,
     TitleCasePipe,
-    CourseContentComponent
+    CourseContentComponent,
+    InputFormatDirective
   ],
   imports: [
     BrowserModule,

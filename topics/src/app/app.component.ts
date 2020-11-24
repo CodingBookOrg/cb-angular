@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { IFavoriteChangedEventArgs } from "./favorite/Out/IFavoriteChangedEventArgs";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +6,19 @@ import { IFavoriteChangedEventArgs } from "./favorite/Out/IFavoriteChangedEventA
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isLiked = false;
-  
-  onFavoriteChanged= (eventArgs: IFavoriteChangedEventArgs) => {
-    console.log("Favorite Changed ", eventArgs);
+  task = {
+    title: "Task 1",
+    assignee: {
+      name: "John"
+    }
+  }
+}
+
+class Course {
+  constructor(public id: number, public name : string) {
+  }
+
+  setName = (name : string) => {
+    this.name += name;
   }
 }
